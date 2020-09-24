@@ -1,10 +1,9 @@
 let notas = [[3,7,7], [4,6,7], [4,5,5]];
-var quienesAprobaron = [];
 
-notas.forEach(function(elemento) {
-    if (elemento.every((nota) => nota >= 4)){
-        quienesAprobaron.push(elemento);
-    }
-});
+const aprobo = (arr) =>  arr.every((nota) => nota >= 4)
 
-console.log(quienesAprobaron);
+
+const quienesAprobaron = (arr) => arr.filter( i => aprobo(i));
+
+console.log(quienesAprobaron(notas))
+

@@ -1,7 +1,7 @@
-let array = [1, 2, 3, 4, 5, 6, 20];
+let array = [1, 2, 3, 4, 5];
 
-const even = (element) => element > 3;
+var even = (element) => element % 2 != 0;
 
-var reject = array.filter(even);
+const reject = (arr, cond) => arr.filter(e => cond(e)).length;
 
-console.log(reject);
+console.log(reject(array, even));

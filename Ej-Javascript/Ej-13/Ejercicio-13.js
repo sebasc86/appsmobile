@@ -8,7 +8,7 @@ class Persona {
     }
 }
 
-class Profesor extends Persona {
+class Estudiante extends Persona {
     constructor(nombre, edad) {
         super(nombre, edad);
     }
@@ -23,7 +23,33 @@ class Profesor extends Persona {
 
 }
 
-    var estudiante1 = new Estudiante('Jorge', 56);
-    console.log(estudiante1.presentarse());
-    console.log(estudiante1.setProfesor('Girafales'));
-    console.log(estudiante1.estudiando());
+
+class Profesor extends Persona {
+    constructor(nombre, edad) {
+        super(nombre, edad);
+        this.estudiantes = [];
+    }
+
+    addEstudiante(estudiante) {
+        estudiante.setProfesor(this.nombre);
+        this.estudiantes.push(estudiante);
+    }
+
+    enseñando() {
+        this.estudiantes.forEach(estudiante => console.log("Le estoy ensañando a " + estudiante.nombre));
+     }
+ 
+}
+
+    let Alumnos = [
+        new Estudiante("Pedro", 20),
+        new Estudiante("Carlos", 23)
+    ];
+
+
+    let profesor = new Profesor("Juan", 40, Alumnos);
+    
+    profesor.addEstudiante(new Estudiante("Laura", 21));
+
+    console.log(profesor.enseñando());
+   

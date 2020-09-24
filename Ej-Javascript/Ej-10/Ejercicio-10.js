@@ -1,5 +1,14 @@
 let array = [1, 2, 3, 4, 5, 6, 20];
 
-const even = (element) => element === 3;
+const even = (element, arr) => { 
+    result = arr.indexOf(element)
+  
+    if(result !== -1){
+        return (true);
+    }
 
-console.log(array.some(even));
+    return(false);
+      
+};
+
+console.log(even(9, array));
