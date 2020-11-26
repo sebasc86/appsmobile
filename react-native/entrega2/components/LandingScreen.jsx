@@ -22,10 +22,10 @@ const LandingScreen = ({ navigation }) => {
         }
       />
     <View style={styles.container}>
-       <Text>Public Landing Screen</Text>
+       <Text>Pagina Home</Text>
       <Button
-        title="Go to Sign In"
-        onPress={() => navigation.navigate("Sign In")}
+        title="Ir a buscar personajes"
+        onPress={() => navigation.navigate("ForName")}
       />
     </View>
     </Container>

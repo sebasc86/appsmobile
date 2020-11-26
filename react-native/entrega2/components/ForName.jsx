@@ -47,7 +47,7 @@ export default class ForName extends Component {
       isReady: true,
       buttonNext: false,
     });
-    console.log(this.state);
+    
   }
 
   peopleGetName = (name) =>
@@ -197,6 +197,20 @@ export default class ForName extends Component {
               <Text>Buscar</Text>
             </Button>
           </View>
+
+          <View>
+            <Button
+            block
+            style={{ marginTop: "2%" }}
+            color="#841584"
+            onPress={() => this.props.navigation.navigate("Landing")}
+            >
+              <Text>Volver al Home</Text>
+            </Button>
+          </View>
+
+            
+
         </Container>
       );
     } else if (Array.isArray(data.results) && data.results.length != 0) {
@@ -257,5 +271,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginBottom: "25%",
+    padding: '2%'
   },
 });

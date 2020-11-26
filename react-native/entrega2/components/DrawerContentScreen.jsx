@@ -30,7 +30,7 @@ export class DrawerContentScreen extends Component {
                         />
                         <DrawerItem 
                             icon={() => <Icon type="material-community" name="calendar" style={styles.icon}/>}
-                            label="Login"
+                            label="Perfil"
                             onPress={() => this.props.navigation.navigate("Sign In")}
                         />
                         <DrawerItem 

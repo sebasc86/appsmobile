@@ -32,8 +32,9 @@ const App = () => {
             <Drawer.Screen name="Landing" component={LandingScreen} />
             <Drawer.Screen name="Sign In">
               {(props) => <SignInScreen {...props} isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />}
-              </Drawer.Screen>
-              <Drawer.Screen name="ForName" component={ForName} />
+            </Drawer.Screen>
+            <Drawer.Screen name="ForName" component={ForName}/>
+            
             </>
             
             

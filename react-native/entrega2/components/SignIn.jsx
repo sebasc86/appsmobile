@@ -36,10 +36,10 @@ const SignInScreen = ({navigation, isAuthenticated, setIsAuthenticated}) => {
         if(isAuthenticated){
             view = (
                 <View style={styles.container}>
-                <Text>Iniciaste Sesion correctamente</Text>
+                <Text style={styles.text}>Iniciaste Sesion correctamente</Text>
                     <Button
-                        title="Ir a buscar usuarios"
-                        onPress={() => navigation.navigate("ForName")}
+                        title="Ir a Home"
+                        onPress={() => navigation.navigate("Landing")}
                     />
                 </View>
             )
@@ -77,6 +77,11 @@ const styles = StyleSheet.create({
         flex: 1,
         resizeMode: "cover",
         justifyContent: "center"
+      },
+    text: {
+        color: '#FFFFFF',
+        marginBottom: '10%',
+        fontWeight: 'bold'
       },
   });
  
