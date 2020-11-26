@@ -16,7 +16,7 @@ const LandingScreen = ({ navigation }) => {
   return (
     <Container >
     <Header
-        centerComponent={{ text: 'LANDING', style: { color: '#fff' } }}
+        centerComponent={{ text: 'Home', style: { color: '#fff' } }}
         leftComponent={
           <Icon name="menu" onPress={() => navigation.openDrawer()} />
         }
