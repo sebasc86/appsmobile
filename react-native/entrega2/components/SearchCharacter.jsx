@@ -1,16 +1,13 @@
 
 import React, { Component } from 'react';
-import { Container, Content, Button, Text, Item, Label, Input, List, ListItem, Left, Right, Body, Title, Icon } from 'native-base';
-import { StyleSheet, TextInput,  View, FlatList} from 'react-native';
-import { AppLoading } from 'expo';
+import { Container, Button, Text, Item, Label, Input, ListItem,  Body, Icon } from 'native-base';
+import { StyleSheet, View, FlatList} from 'react-native';
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
-import { StatusBar } from 'expo-status-bar';
 import 'react-native-gesture-handler';
-import { NavigationContainer } from '@react-navigation/native';
 import { Header } from 'react-native-elements';
 
-export default class ForName extends Component {
+export default class SearchCharacter extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -157,10 +154,14 @@ export default class ForName extends Component {
       return (
         <Container>
          <Header
-            centerComponent={{ text: 'Search Name', style: { color: '#fff' } }}
+            centerComponent={{ text: "BUSCAR", style: { color: "#fff" } }}
             leftComponent={
-              <Icon name="menu" onPress={() => navigation.openDrawer()} />
+              <Icon name="menu" onPress={() => this.props.navigation.openDrawer()} />
             }
+            containerStyle={{
+              backgroundColor: "#3D6DCC",
+              justifyContent: "space-around",
+            }}
           />
         <View>
           <Text>Cargando...</Text>
@@ -173,12 +174,15 @@ export default class ForName extends Component {
       return (
         <Container>
           <Header
-            centerComponent={{ text: 'Buscar', style: { color: '#fff' } }}
+            centerComponent={{ text: "BUSCAR", style: { color: "#fff" } }}
             leftComponent={
               <Icon name="menu" onPress={() => this.props.navigation.openDrawer()} />
-            } />
-            
-          
+            }
+            containerStyle={{
+              backgroundColor: "#3D6DCC",
+              justifyContent: "space-around",
+            }}
+          />
 
           <View style={styles.container}>
             <Item floatingLabel>
@@ -200,28 +204,30 @@ export default class ForName extends Component {
 
           <View>
             <Button
-            block
-            style={{ marginTop: "2%" }}
-            color="#841584"
-            onPress={() => this.props.navigation.navigate("Landing")}
+              block
+              style={{ marginTop: "2%" }}
+              color="#841584"
+              onPress={() => this.props.navigation.navigate("Home")}
             >
               <Text>Volver al Home</Text>
             </Button>
           </View>
-
-            
-
         </Container>
       );
     } else if (Array.isArray(data.results) && data.results.length != 0) {
       return (
         <Container>
-           <Header
-            centerComponent={{ text: 'Resultado', style: { color: '#fff' } }}
+            <Header
+            centerComponent={{ text: "RESULTADO", style: { color: "#fff" } }}
             leftComponent={
-              <Icon name="menu" onPress={() => this.props.navigation.openDrawer()} />
+              <Icon name="menu" onPress={() => navigation.openDrawer()} />
             }
-           />
+            containerStyle={{
+              backgroundColor: "#3D6DCC",
+              justifyContent: "space-around",
+            }}
+          />
+         
            
 
           <FlatList
@@ -247,11 +253,16 @@ export default class ForName extends Component {
       return (
         <Container>
           <Header
-            centerComponent={{ text: 'Resultado', style: { color: '#fff' } }}
+            centerComponent={{ text: "RESULTADO", style: { color: "#fff" } }}
             leftComponent={
               <Icon name="menu" onPress={() => this.props.navigation.openDrawer()} />
             }
-           />
+            containerStyle={{
+              backgroundColor: "#3D6DCC",
+              justifyContent: "space-around",
+            }}
+          />
+        
           
           <View style={styles.container}>
             <Text>No se encontraron datos</Text>

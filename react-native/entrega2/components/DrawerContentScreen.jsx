@@ -26,7 +26,7 @@ export class DrawerContentScreen extends Component {
                         <DrawerItem 
                             icon={() => <Icon type="material-community" name="home-outline" style={styles.icon}/>}
                             label="Home"
-                            onPress={() => this.props.navigation.navigate("Landing")}
+                            onPress={() => this.props.navigation.navigate("Home")}
                         />
                         <DrawerItem 
                             icon={() => <Icon type="material-community" name="calendar" style={styles.icon}/>}
@@ -36,7 +36,7 @@ export class DrawerContentScreen extends Component {
                         <DrawerItem 
                             icon={() => <Icon type="material-community" name="calendar" style={styles.icon}/>}
                             label="Buscar Personajes"
-                            onPress={() => this.props.navigation.navigate("ForName")}
+                            onPress={() => this.props.navigation.navigate("Search Character")}
                         />
                     </View>
                 </DrawerContentScrollView>
