@@ -220,7 +220,7 @@ export default class SearchCharacter extends Component {
             <Header
             centerComponent={{ text: "RESULTADO", style: { color: "#fff" } }}
             leftComponent={
-              <Icon name="menu" onPress={() => navigation.openDrawer()} />
+              <Icon name="menu" onPress={() => this.props.navigation.openDrawer()} />
             }
             containerStyle={{
               backgroundColor: "#3D6DCC",
